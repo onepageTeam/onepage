@@ -1,0 +1,42 @@
+.homepage{
+	color:#fff;
+	text-align:center;
+
+	> .bgSection, 
+	> .contentSection {
+		min-height:70%; 
+	}
+
+	p{
+		color:#fff;
+		font-size:18px;
+		margin:auto;
+		max-width:940px;
+		width:80%;
+	}
+}
+
+.logoImg{
+	display:block; 
+	margin:0 auto; 
+	max-height:30%; 
+	max-width:940px;
+	padding:8vh 0 6vh;
+	width:80%;
+}
+
+
+/* HOMEPAGE VIDEO */
+.homepage_bgVideo{
+	height:100%;
+	left:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	z-index:0;
+}
+
+.homepage_content{
+	position:relative;
+	z-index:1;
+}

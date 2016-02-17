@@ -1,0 +1,16 @@
+FULL TUTO : https://24ways.org/2013/grunt-is-not-weird-and-hard/
+
+With package.json AND Gruntfile.js
+Put this 2 files in a folder named 'assets' (root of wordpress theme)
+
+npm install
+npm install -g grunt-cli
+npm install grunt-contrib-concat --save-dev
+npm install grunt-contrib-uglify --save-dev
+npm install grunt-contrib-imagemin --save-dev
+npm install grunt-contrib-watch --save-dev
+npm install grunt-contrib-sass --save-dev
+(if necessary, install Ruby, then restart the console, the 'gem install sass')
+npm install matchdep --save-dev
+npm install -g grunt-cli --save-dev
+npm install grunt-cli grunt-contrib-watch grunt-autoprefixer --save-dev

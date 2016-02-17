@@ -1,0 +1,100 @@
+/* Hide (function php) in the admin */
+#mainMenu, 
+#wp-admin-bar-new-content, 
+#wp-admin-bar-comments,
+#wpbody-content .manage-menus{display:none;}
+
+/* Display an error message when trying to add a child in the menu */
+#menu-to-edit .menu-item-depth-1 .menu-item-handle,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle
+#menu-to-edit .menu-item-depth-3 .menu-item-handle{background:red;}
+#menu-to-edit .menu-item-depth-1 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-3 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-1 .menu-item-handle:after,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle:after,
+#menu-to-edit .menu-item-depth-3 .menu-item-handle:after{content:"Error - No sub menu avalable for this theme"; font:600 25px "Courier New", Courier, monospace;}
+
+/* Advanced Custom Fields */
+.acf-postbox.seamless > .acf-fields > .acf-field{
+	box-sizing:border-box; 
+	padding-right:4%;
+}
+
+.imgCategory img{
+	max-height:10px;
+    width:auto;
+}
+
+#flexible_content_columns .acf-row{display:inline-block; margin-top:20px; vertical-align:top; width:33%;}
+#flexible_content_columns .acf-row > .acf-fields{width:82%;}
+
+/* Pages Background and Shape */
+#shape_type li{
+	margin-top:140px;
+	min-width:200px;
+}
+
+#shape_type input{
+	position:relative;
+}
+
+#shape_type input:after{
+	background-color:#2e2e2e;
+	background-size:contain;
+	top:-100px;
+	content:" "; 
+	height:90px; 
+	left:0; 
+	position:absolute; 
+	width:200px;
+}
+
+#shape_type input[value="shape-full"]:after{
+	background:url(admin/img/shape-full.png) no-repeat left center;
+}
+
+#shape_type input[value="shape-tab_up"]:after{
+	background:url(admin/img/shape-tab_up.png) no-repeat left center;
+}
+
+#shape_type input[value="shape-tab_down"]:after{
+	background:url(admin/img/shape-tab_down.png) no-repeat left center;
+}
+
+#shape_type input[value="shape-tab_up_down"]:after{
+	background:url(admin/img/shape-tab_up_down.png) no-repeat left center;
+}
+
+#shape_type input[value="shape-bandeau"]:after{
+	background:url(admin/img/shape-bandeau.png) no-repeat left center;
+}
+
+#background_type{
+	position:relative;
+}
+
+.acf-fields > .acf-field{
+	background-color:#fff;
+	position:relative;
+}
+
+#background_type:after{
+	background:url(admin/img/forbidden.png) no-repeat top left;
+	color:#23282d;
+	top:20px;
+	content:" Choices of 'Shape' & 'Background' incompatible"; 
+	height:133px; 
+	right:-370px; 
+	padding:10px 0 0 50px ;
+	position:absolute; 
+	width:300px;
+}
+
+
+/* acf-field-message */
+.acf-fields > .acf-field-message{
+	background-color:#f9f9f9;
+}
+
+

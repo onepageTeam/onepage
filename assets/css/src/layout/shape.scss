@@ -1,0 +1,39 @@
+.bgSection {
+	&.shape-tab_up{
+		padding-top:20px;
+	}
+
+	&.shape-tab_down{
+		padding-bottom:20px;
+	}
+
+	&.shape-tab_up_down{
+		padding:20px 0;
+	}
+
+	&.shape-tab_up:before,
+	.shape-tab_up_down:before{
+		content:" ";
+		height:21px; 
+		left:0;
+		margin:auto;
+		position:absolute;
+		right:0;
+		top:-20px;
+		width:66%;
+		z-index:2;
+	}
+
+	&.shape-tab_down:after,
+	.shape-tab_up_down:after{
+		bottom:-20px;
+		content:" ";
+		height:21px; 
+		left:0;
+		margin:auto;
+		position:absolute;
+		right:0;
+		width:66%;
+		z-index:2;
+	}
+}

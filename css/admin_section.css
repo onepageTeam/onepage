@@ -1,0 +1,17 @@
+/* Hide (function php) in the admin */
+#wp-admin-bar-new-content, 
+#wp-admin-bar-comments,
+#wpbody-content .manage-menus{display:none;}
+
+/* Display an error message when trying to add a child in the menu */
+#menu-to-edit .menu-item-depth-1 .menu-item-handle,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle
+#menu-to-edit .menu-item-depth-3 .menu-item-handle{background:red;}
+#menu-to-edit .menu-item-depth-1 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-3 .menu-item-handle:before,
+#menu-to-edit .menu-item-depth-1 .menu-item-handle:after,
+#menu-to-edit .menu-item-depth-2 .menu-item-handle:after,
+#menu-to-edit .menu-item-depth-3 .menu-item-handle:after{content:"Error - No sub menu avalable for this theme"; font:600 25px "Courier New", Courier, monospace;}
+
+

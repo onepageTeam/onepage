@@ -1,0 +1,51 @@
+@media only screen and (max-width:1280px) {
+}
+
+@media only screen and (max-width:980px) {
+}
+
+@media only screen and (max-width:767px) {
+	/**
+	 * GENERAL
+	 */
+	h1{
+		font-size:2em;
+	}
+	p,
+	.homepage p,
+	.ctaLink{
+		font-size:1em;
+	}
+
+
+
+
+	/**
+	 * HOME
+	 */
+	.ctaLink{
+		margin:7vh auto;
+	}
+
+
+
+
+	/**
+	 * Template Flexible content columns
+	 **/
+	.flexible_content_1column > div, 
+	.flexible_content_2column > div, 
+	.flexible_content_3column > div, 
+	.flexible_content_4column > div, 
+	.flexible_content_5column > div, 
+	.flexible_content_6column > div{
+		padding-right:0;
+		width:100%;
+	}
+
+}
+
+@media only screen and (max-width:480px) {
+
+}
+
