@@ -1,11 +1,14 @@
 var jsSrc = [
+                'js/libs/jquery-2.2.0.min.js',
                 'node_modules/bootstrap/dist/js/bootstrap.min.js', // include bootstrap
+                'plugins/**/*.js', // include plugins
                 'js/src/*.js', // All JS in the src folder
                 'js/src/**/*.js' 
             ];
 
 var cssSrc = [
                 'node_modules/bootstrap/dist/css/bootstrap.min.css', // include bootstrap
+                'plugins/**/*.css', // include plugins
                 'css/src/*.scss',
                 'css/src/**/*.scss' 
             ];
@@ -32,7 +35,7 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 src: 'js/main.js',
-                dest: 'js/main-min.js'
+                dest: 'js/main.min.js'
             }
         },
 
@@ -52,7 +55,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main-min.css': 'css/main.css'
+                    'css/main.min.css': 'css/main.css'
                 }
             } 
         },
