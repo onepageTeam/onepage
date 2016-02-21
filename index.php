@@ -1,54 +1,54 @@
-<?php
-/**
- * Koin
- *
- * @package OnePage
- * @subpackage OnePage
- * @since OnePage 0.1
-
- Start with page.php
- Each sections are in home-page.php
- */
- ?>
-<!--
-
-get_header();
-<main>
-	<?php if ( have_posts() ) : ?>
-		<?php if ( is_home() && ! is_front_page() ) : ?>
-			<header>
-				<h1><?php single_post_title(); ?></h1>
-			</header>
-		<?php endif; ?>
-
-		<?php
-		// Start the loop.
-		while ( have_posts() ) : the_post();
-			/*
-			 * Include the Post-Format-specific template for the content.
-			 * If you want to override this in a child theme, then include a file
-			 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-			 */
-			get_template_part( 'content', get_post_format() );
-		// End the loop.
-		endwhile;
-
-		// Previous/next page navigation.
-		the_posts_pagination( array(
-			'prev_text'          => __( 'Previous page', 'twentyfifteen' ),
-			'next_text'          => __( 'Next page', 'twentyfifteen' ),
-			'before_page_number' => '<span class="meta-nav screen-reader-text">' . __( 'Page', 'twentyfifteen' ) . ' </span>',
-		) );
-
-	// If no content, include the "No posts found" template.
-	else :
-		get_template_part( 'content', 'none' );
-	endif;
-	?>
-</main>
-
-<?php get_footer(); ?>
-
-
-VOIR SI IL FAUT CHANGER LE INDEX.PHP POUR ALLER SUR LE ONE PAGE
--->
+<?php
+/**
+ * Koin
+ *
+ * @package OnePage
+ * @subpackage OnePage
+ * @since OnePage 1.1
+
+ Start with page.php
+ Each sections are in home-page.php
+ */
+
+
+
+get_header(); 
+?>
+
+<div class="container-fluid">
+	<?php
+		/* Get all the pages in sections for onePage */
+		$menu_items = wp_get_nav_menu_items('Main Menu');
+		if( $menu_items ) {
+			foreach ( (array) $menu_items as $key => $menu_item ) {
+				$pageData = get_post( $menu_item->object_id );
+				$pageId = $pageData->ID;
+				$templatePath = get_page_template_slug($pageId);
+				$templateName = wp_basename( $templatePath, ".php");
+
+				if($pageData->post_status == "publish"){
+				?>
+					<section id="<?= sanitize_title($menu_item->title) ?>" class="<?= $templateName ?> row">
+						<?php include('inc/background_manager.php'); ?>
+						<div class="contentSection row">
+							<?php
+							/* Display the template used OR display generic content */
+							if(!@include($templatePath)){
+								/*<h1><?= $pageData->post_title ?></h1>
+								<p><?= $pageData->post_content ?></p>*/
+							} else{
+								/*include('/'. $templatePath);*/
+							}
+
+							?>
+						</div>
+					</section>
+
+				<?php
+				}
+			}
+		}
+	?>
+</div>
+
+<?php get_footer(); ?>

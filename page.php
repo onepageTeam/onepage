@@ -1,5 +1,8 @@
 <?php
 /**
+
+TOUT EST TRANSFERE SUR INDEX.PHP!!!!!!!!!!!!!!!!
+
  * The template for displaying pages
  *
  * This is the template that displays all pages by default.
@@ -9,14 +12,14 @@
  * @package OnePage
  * @subpackage OnePage
  * @since OnePage 0.1
- */
+
 
 get_header(); 
 ?>
 
 <div class="container-fluid">
 	<?php
-		/* Get all the pages in sections for onePage */
+		/* Get all the pages in sections for onePage *
 		$menu_items = wp_get_nav_menu_items('Main Menu');
 		if( $menu_items ) {
 			foreach ( (array) $menu_items as $key => $menu_item ) {
@@ -31,12 +34,12 @@ get_header();
 						<?php include('inc/background_manager.php'); ?>
 						<div class="contentSection row">
 							<?php
-							/* Display the template used OR display generic content */
+							/* Display the template used OR display generic content *
 							if(!@include($templatePath)){
 								/*<h1><?= $pageData->post_title ?></h1>
-								<p><?= $pageData->post_content ?></p>*/
+								<p><?= $pageData->post_content ?></p>*
 							} else{
-								/*include('/'. $templatePath);*/
+								/*include('/'. $templatePath);*
 							}
 
 							?>
@@ -50,4 +53,4 @@ get_header();
 	?>
 </div>
 
-<?php get_footer(); ?>
+<?php get_footer();  */?>
