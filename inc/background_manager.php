@@ -25,7 +25,7 @@ switch ($background_type) {
 		$background_slider_imgs = get_field('background_slider_imgs', $pageId);
 		$background_slider_duration = get_field('background_slider_duration', $pageId);
 
-		$content .= '<div class="container">';
+		$content .= '<div>';
         $content .= '<ul class="template_slider" data-background_slider_duration="'. $background_slider_duration .'">';
 		foreach( $background_slider_imgs as $image ):
             $content .= '<li style="background-image:url('. $image['sizes']['large'] .');">';
@@ -39,7 +39,7 @@ switch ($background_type) {
 		break;
 	
 	case 'video':
-		$content .= '<div class="container">';
+		$content .= '<div>';
 		/*$content .= '<iframe src="http://www.youtube.com/embed/841VcS9IxDc?autoplay=1&controls=0&loop=1&showinfo=0&modestbranding=1&disablekb=1&enablejsapi=1&playerapiid=ytplayer&version=3&fs=0" type="text/html" frameborder="0" class="bgVideo"></iframe>';
 		$content .= '<iframe
 							 src="//www.youtube.com/embed/841VcS9IxDc?autoplay=1&controls=0&enablejsapi=0&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&iv_load_policy=3"

@@ -1,5 +1,5 @@
 var jsSrc = [
-                'js/libs/jquery-2.2.0.min.js',
+                'js/libs/jquery-2.2.0.min.js', // jQuery
                 'node_modules/bootstrap/dist/js/bootstrap.min.js', // include bootstrap
                 'plugins/**/*.js', // include plugins
                 'js/src/*.js', // All JS in the src folder

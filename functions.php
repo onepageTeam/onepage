@@ -21,6 +21,8 @@ if ( version_compare( $GLOBALS['wp_version'], '4.1-alpha', '<' ) ) {
 
 function wpdocs_theme_name_scripts() {
     wp_enqueue_style( 'main_css', get_template_directory_uri() . '/assets/css/main.min.css' );
+    wp_enqueue_script( 'TweenMax', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js', array(), '1.0.0', false );
+    wp_enqueue_script( 'ScrollToPlugin', 'http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js', array(), '1.0.0', false );
     wp_enqueue_script( 'main_js', get_template_directory_uri() .'/assets/js/main.js', array(), '1.0.0', false );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
@@ -116,7 +118,7 @@ function dynamic_css() { // Don't wrap function dynamic_css() in if(!is_admin())
          *       Warning: require(http://domain/path/flags/css.php): failed to open stream: no suitable wrapper could be found
          *       Fatal error: require(): Failed opening required 'http://domain/path/css.php'
          */
-        require dirname( __FILE__ ) . '/css/dynamic.css.php'; //use echo, printf etc in css.php and write to standard out.
+        require dirname( __FILE__ ) . '/inc/dynamic.css.php'; //use echo, printf etc in css.php and write to standard out.
     }
     exit;
 }

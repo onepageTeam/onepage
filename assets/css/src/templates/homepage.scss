@@ -41,4 +41,20 @@
 	z-index:1;
 }
 
-.ctaLink{background-color:#6d9759; color:#fff; display:inline-block; font:400 20px Cinzel; margin:12vh auto; padding:1em; text-decoration:none;}
+.ctaLink{
+	background-color: #6d9759; 
+	color: #fff; 
+	display: inline-block; 
+	font: 400 1em Cinzel; 
+	margin: 7vh auto;
+	padding: 1em; 
+	text-decoration: none;
+}
+
+
+@media (min-width: $screen-sm-min) {
+	.ctaLink{
+		font-size: 20px;
+		margin: 12vh auto;
+	}
+}
