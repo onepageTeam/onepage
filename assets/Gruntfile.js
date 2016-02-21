@@ -61,16 +61,7 @@ module.exports = function(grunt) {
         },
 
         // Minified IMAGE
-        imagemin: {
-            dynamic: {
-                files: [{
-                    expand: true,
-                    cwd: 'img/src/',
-                    src: ['**/*.{png,jpg,gif}'],
-                    dest: 'img/'
-                }]
-            }
-        },
+
 
         watch: {
             options: {
@@ -99,5 +90,5 @@ module.exports = function(grunt) {
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
-    grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'sass', 'autoprefixer', 'watch']);
+    grunt.registerTask('default', ['concat', 'uglify', 'sass', 'autoprefixer', 'watch']);
 };
