@@ -14,7 +14,7 @@
 get_header(); 
 ?>
 
-<div class="container-fluid">
+<div id="mainContainer" class="container-fluid">
 	<?php
 		/* Get all the pages in sections for onePage */
 		$menu_items = wp_get_nav_menu_items('Main Menu');

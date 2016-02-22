@@ -27,7 +27,7 @@ module.exports = function(grunt) {
             },
             css: {
                 src: cssSrc,
-                dest: 'css/main.css',
+                dest: 'css/main.scss',
             }
         },
 
@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         autoprefixer:{
             dist:{
                 files:{
-                    'css/main.css':'css/main.css'
+                    'css/main.scss':'css/main.scss'
                 }
             }
         },
@@ -51,11 +51,9 @@ module.exports = function(grunt) {
         // Minified CSS
         sass: {
             dist: {
-                options: {
-                    style: 'compressed'
-                },
+
                 files: {
-                    'css/main.min.css': 'css/main.css'
+                    'css/main.min.css': 'css/main.scss'
                 }
             } 
         },

@@ -106,9 +106,12 @@ if(get_field('theme_main_color', 'option'))
 	echo 'p{color:'. get_field('theme_main_color', 'option') .';}' . "\n";
 /* Link */
 if(get_field('theme_link_color', 'option')){
+	/* Links */
 	echo 'a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
-	echo '.ctaLink,.socicon li a{background-color:'. get_field('theme_link_color', 'option') .';}' . "\n";
-	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
+	echo 'a:hover{color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	/* Buttons */
+	echo '.ctaLink,.socicon li a{background-color:'. get_field('theme_link_color', 'option') .'; color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_link_color_over', 'option') .'; color:'. get_field('theme_link_color', 'option') .';}' . "\n";
 }
 if(get_field('theme_link_color_over', 'option')){
 	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_homepage_texte_color', 'option') .';}' . "\n";
@@ -132,9 +135,6 @@ if( $menu_items ) {
 	foreach ( (array) $menu_items as $key => $menu_item ) {
 		$pageData = get_post( $menu_item->object_id );
 		$pageId = $pageData->ID;
-		$background_shape = get_field('shape_type', $pageId);
-		$background_type = get_field('background_type', $pageId);
-		$section = sanitize_title($menu_item->title);
 		/**
 		 * Pages Texts, Background and Shape
 		 **/
@@ -144,8 +144,7 @@ if( $menu_items ) {
 		?>/* Texts */
 		<?php
 
-		// p
-		if( have_rows('page_setting_font_repeater', $pageId) ):
+		if( have_rows('page_setting_font_repeater', $pageId) && get_field('page_setting_font_custom') ):
 			while ( have_rows('page_setting_font_repeater', $pageId) ) : the_row();
 				echo '#'. $section .', #'. $section .' '. get_sub_field('page_setting_font_tag', $pageId) .' {';
 					if(get_sub_field("page_setting_font_family", $pageId))

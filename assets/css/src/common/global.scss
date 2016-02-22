@@ -1,4 +1,7 @@
-body{background-color:#fff; font-family:Cantarell;}
+body{
+	background-color: #fff; 
+	font-family: Cantarell;
+}
 
 h1 {
 	color: #ccc; 
@@ -27,8 +30,14 @@ p {
 }
 
 a {
+	text-decoration: none;
 	transition: all 0.2s ease-out;
+
+	&:focus, :hover {
+		text-decoration: none!important;
+	}
 }
+
 
 @media (min-width: $screen-sm-min) {
 	h1{

@@ -1,3 +1,13 @@
+#mainContainer {
+	position:r elative;
+	width: 100%;
+	z-index: 0;
+}
+
+#mainContainer > * {
+	position: relative;
+}
+
 .row-no-padding {
 	[class*="col-"] {
 		padding-left: 0 !important;
