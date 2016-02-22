@@ -38,6 +38,11 @@ a {
 	}
 }
 
+.btn {
+	border: none;
+	border-radius: 0;
+}
+
 
 @media (min-width: $screen-sm-min) {
 	h1{

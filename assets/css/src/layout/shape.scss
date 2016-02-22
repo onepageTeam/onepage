@@ -37,3 +37,8 @@
 		z-index:2;
 	}
 }
+
+#mainContainer > section:first-child > .shape-tab_up,
+#mainContainer > section:first-child > .shape-tab_up_down{
+	top: 20px;
+}

@@ -400,6 +400,11 @@ a {
 	}
 }
 
+.btn {
+	border: none;
+	border-radius: 0;
+}
+
 
 @media (min-width: $screen-sm-min) {
 	h1{
@@ -698,6 +703,10 @@ a {
 	}
 }
 
+#mainContainer > section:first-child > .shape-tab_up,
+#mainContainer > section:first-child > .shape-tab_up_down{
+	top: 20px;
+}
 .homepage{
 	color:#fff;
 	text-align:center;

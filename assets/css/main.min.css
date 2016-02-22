@@ -5968,6 +5968,10 @@ a {
   a:focus, a :hover {
     text-decoration: none !important; }
 
+.btn {
+  border: none;
+  border-radius: 0; }
+
 @media (min-width: 768px) {
   h1 {
     font-size: 48px; } }
@@ -6201,6 +6205,10 @@ a {
   right: 0;
   width: 66%;
   z-index: 2; }
+
+#mainContainer > section:first-child > .shape-tab_up,
+#mainContainer > section:first-child > .shape-tab_up_down {
+  top: 20px; }
 
 .homepage {
   color: #fff;

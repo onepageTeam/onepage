@@ -109,12 +109,11 @@ if(get_field('theme_link_color', 'option')){
 	/* Links */
 	echo 'a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
 	echo 'a:hover{color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	/* SVG */
+	echo 'svg{fill:'. get_field('theme_link_color', 'option') .';}' . "\n";
 	/* Buttons */
-	echo '.ctaLink,.socicon li a{background-color:'. get_field('theme_link_color', 'option') .'; color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
-	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_link_color_over', 'option') .'; color:'. get_field('theme_link_color', 'option') .';}' . "\n";
-}
-if(get_field('theme_link_color_over', 'option')){
-	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_homepage_texte_color', 'option') .';}' . "\n";
+	echo '.btn{background-color:'. get_field('theme_link_color', 'option') .'; color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	echo '.btn:hover,#menu-main-menu .active a{background-color:'. get_field('theme_link_color_over', 'option') .'; color:'. get_field('theme_link_color', 'option') .';}' . "\n";
 }
 
 
@@ -135,6 +134,9 @@ if( $menu_items ) {
 	foreach ( (array) $menu_items as $key => $menu_item ) {
 		$pageData = get_post( $menu_item->object_id );
 		$pageId = $pageData->ID;
+		$background_shape = get_field('shape_type', $pageId);
+		$background_type = get_field('background_type', $pageId);
+		$section = sanitize_title($menu_item->title);
 		/**
 		 * Pages Texts, Background and Shape
 		 **/
@@ -144,9 +146,16 @@ if( $menu_items ) {
 		?>/* Texts */
 		<?php
 
-		if( have_rows('page_setting_font_repeater', $pageId) && get_field('page_setting_font_custom') ):
+		if( have_rows('page_setting_font_repeater', $pageId) && get_field('page_setting_font_custom', $pageId) ):
+			$hasCustomLink = false;
 			while ( have_rows('page_setting_font_repeater', $pageId) ) : the_row();
-				echo '#'. $section .', #'. $section .' '. get_sub_field('page_setting_font_tag', $pageId) .' {';
+				$tag = get_sub_field('page_setting_font_tag', $pageId);
+				if( $tag == 'a' ) {
+					$hasCustomLink = true; 
+					$page_setting_font_color = get_sub_field("page_setting_font_color", $pageId);
+					$page_setting_font_color_hover = get_sub_field("page_setting_font_color_hover", $pageId);
+				}
+				echo '#'. $section .' '. get_sub_field('page_setting_font_tag', $pageId) .' {';
 					if(get_sub_field("page_setting_font_family", $pageId))
 						echo 'font-family:"'. get_sub_field("page_setting_font_family", $pageId) .'"; ';
 					if(get_sub_field("page_setting_font_size", $pageId))
@@ -154,8 +163,26 @@ if( $menu_items ) {
 					if(get_sub_field("page_setting_font_color", $pageId))
 						echo 'color:'. get_sub_field("page_setting_font_color", $pageId) .'; ';
 				echo '}'. "\n";
+
+
 			endwhile;
+
+			/* Hover */
+			if($hasCustomLink){
+			echo $hasCustomLink;
+				echo '#'. $section .' a:hover{color:'. $page_setting_font_color_hover .';}' . "\n";
+				echo '#'. $section .' svg{fill:'. $page_setting_font_color .';}' . "\n";
+				echo '#'. $section .' .btn{background-color:'. $page_setting_font_color_hover .'; color:'. $page_setting_font_color .';}' . "\n";
+				echo '#'. $section .' .btn:hover{background-color:'. $page_setting_font_color .'; color:'. $page_setting_font_color_hover .';}' . "\n";
+			}
+
 		endif;
+	/* Links */
+	/*echo 'a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
+	echo 'a:hover{color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	/* Buttons *
+	echo '.ctaLink,.socicon li a{background-color:'. get_field('theme_link_color', 'option') .'; color:'. get_field('theme_link_color_over', 'option') .';}' . "\n";
+	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_link_color_over', 'option') .'; color:'. get_field('theme_link_color', 'option') .';}' . "\n";*/
 		/*echo '#'. $section .', #'. $section .' p{';
 		if(get_field("page_setting_p_font_family", $pageId))
 			echo 'font-family:"'. get_field("page_setting_p_font_family", $pageId) .'"; ';
@@ -192,13 +219,10 @@ if( $menu_items ) {
 		<?php
 		if($background_type == 'color')
 			echo '#'. $section .' .bgSection{background-color:'. get_field("background_color_int", $pageId) .';}' . "\n";
-		if(get_field('background_color_ext', $pageId))
 			echo '#'. $section .' .bgSection.shape-tab_up:before, 
 				  #'. $section .' .bgSection.shape-tab_down:after,
 				  #'. $section .' .bgSection.shape-tab_up_down:before,
-				  #'. $section .' .bgSection.shape-tab_up_down:after{background-color:'. get_field("background_color_ext", $pageId) .';}' . "\n";
-
-
+				  #'. $section .' .bgSection.shape-tab_up_down:after{background-color:'. get_field("background_color_int", $pageId) .';}' . "\n";
 		echo "\n";
 		?>/* Background image */<?php
 		if($background_type == 'image')
