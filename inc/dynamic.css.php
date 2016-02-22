@@ -107,11 +107,11 @@ if(get_field('theme_main_color', 'option'))
 /* Link */
 if(get_field('theme_link_color', 'option')){
 	echo 'a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
-	echo '.ctaLink,.soc li a{background-color:'. get_field('theme_link_color', 'option') .';}' . "\n";
-	echo '.ctaLink:hover,.soc li a:hover,#menu-main-menu .active a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
+	echo '.ctaLink,.socicon li a{background-color:'. get_field('theme_link_color', 'option') .';}' . "\n";
+	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{color:'. get_field('theme_link_color', 'option') .';}' . "\n";
 }
 if(get_field('theme_link_color_over', 'option')){
-	echo '.ctaLink:hover,.soc li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_homepage_texte_color', 'option') .';}' . "\n";
+	echo '.ctaLink:hover,.socicon li a:hover,#menu-main-menu .active a{background-color:'. get_field('theme_homepage_texte_color', 'option') .';}' . "\n";
 }
 
 
@@ -143,8 +143,21 @@ if( $menu_items ) {
 		echo '/****'. $section .'****/'. "\n"
 		?>/* Texts */
 		<?php
+
 		// p
-		echo '#'. $section .', #'. $section .' p{';
+		if( have_rows('page_setting_font_repeater', $pageId) ):
+			while ( have_rows('page_setting_font_repeater', $pageId) ) : the_row();
+				echo '#'. $section .', #'. $section .' '. get_sub_field('page_setting_font_tag', $pageId) .' {';
+					if(get_sub_field("page_setting_font_family", $pageId))
+						echo 'font-family:"'. get_sub_field("page_setting_font_family", $pageId) .'"; ';
+					if(get_sub_field("page_setting_font_size", $pageId))
+						echo 'font-size:'. get_sub_field("page_setting_font_size", $pageId) .'px; ';
+					if(get_sub_field("page_setting_font_color", $pageId))
+						echo 'color:'. get_sub_field("page_setting_font_color", $pageId) .'; ';
+				echo '}'. "\n";
+			endwhile;
+		endif;
+		/*echo '#'. $section .', #'. $section .' p{';
 		if(get_field("page_setting_p_font_family", $pageId))
 			echo 'font-family:"'. get_field("page_setting_p_font_family", $pageId) .'"; ';
 		if(get_field("page_setting_p_font_size", $pageId))
@@ -160,7 +173,7 @@ if( $menu_items ) {
 		// a
 		if(get_field("page_setting_a_font_color", $pageId)){
 			echo '#'. $section .' a{color:'. get_field("page_setting_a_font_color", $pageId) .'; '. "\n";
-			/*echo '#'. $section .' .bxslider-controls a:hover polygon{fill:'. get_field("page_setting_a_font_color", $pageId) .';} '. "\n";*/
+			/*echo '#'. $section .' .bxslider-controls a:hover polygon{fill:'. get_field("page_setting_a_font_color", $pageId) .';} '. "\n";*
 		}
 		
 		//h1, h2, h3
@@ -175,7 +188,7 @@ if( $menu_items ) {
 			echo '}'. "\n";
 		}
 
-		echo "\n";
+		echo "\n";*/
 		?>/* Background color */
 		<?php
 		if($background_type == 'color')

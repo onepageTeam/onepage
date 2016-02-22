@@ -213,6 +213,9 @@
  * RESET CSS
  */
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video { margin: 0; padding: 0; } body { line-height: 1;}
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
+
 $brand-primary: #27ae60;
 
 $screen-sm-min : 768px;
@@ -335,9 +338,6 @@ $screen-lg-min : 1200px;
 #menu-to-edit .menu-item-depth-3 .menu-item-handle:after{content:"Error - No sub menu avalable for this theme"; font:600 25px "Courier New", Courier, monospace;}
 
 
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
-@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
-
 /**
  * SOCIALS ICONS
  */
@@ -359,6 +359,7 @@ $screen-lg-min : 1200px;
         src: url(fonts/socicon.svg) format(svg);
     }
 }
+
 body{background-color:#fff; font-family:Cantarell;}
 
 h1 {
@@ -398,10 +399,6 @@ a {
 }
 .clear{clear:both;}
 
-@import url(https://fonts.googleapis.com/css?family=Cinzel);
-@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
-
-$brand-primary:         #27ae60;
 
 
 .row-no-padding {
@@ -539,6 +536,95 @@ $brand-primary:         #27ae60;
 #menu-main-menu li:hover a{
 	background-color:#fff; 
 	color:#6d9759;
+}
+/**
+ * SOCIALS ICONS
+ */
+
+.socicon {
+    margin: 20px auto;
+    overflow: hidden;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        a {
+            background-color: none;
+            color: #ffffff;
+            display: block;
+            font-family:400 20px/37px si!important;
+            margin-right: 11px;
+            overflow: hidden;
+            padding: 9px;
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            z-index: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        &:last-child a{
+            margin-right: 0;
+        }
+    }
+}
+
+.soc-twitter {
+    background-color: #4da7de;
+}
+.soc-twitter:before {
+    content: 'e040';
+}
+.soc-facebook {
+    background-color: #3e5b98;
+}
+.soc-facebook:before {
+    content: 'b';
+}
+.soc-google {
+    background-color: #d93e2d;
+}
+.soc-google:before {
+    content: 'c';
+}
+.soc-pinterest {
+    background-color: #c92619;
+}
+.soc-pinterest:before {
+    content: 'd';
+}
+.soc-linkedin {
+    background-color: #3371b7;
+}
+.soc-linkedin:before {
+    content: 'j';
+}
+.soc-rss {
+    background-color: #f26109;
+}
+.soc-rss:before {
+    content: ',';
+}
+.soc-twitter:hover {
+    background-color: #3993ca;
+}
+.soc-facebook:hover {
+    background-color: #2a4784;
+}
+.soc-google:hover {
+    background-color: #c52a19;
+}
+.soc-pinterest:hover {
+    background-color: #b51205;
+}
+.soc-linkedin:hover {
+    background-color: #1f5da3;
+}
+.soc-rss:hover {
+    background-color: #de4d00;
 }
 .bgSection {
     height: 100%;
