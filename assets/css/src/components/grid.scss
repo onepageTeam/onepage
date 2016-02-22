@@ -1,11 +1,17 @@
 #mainContainer {
-	position:r elative;
+	position: relative;
 	width: 100%;
 	z-index: 0;
 }
 
 #mainContainer > * {
 	position: relative;
+}
+
+.contentSection {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 40px;
 }
 
 .row-no-padding {

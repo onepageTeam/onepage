@@ -39,23 +39,25 @@ module.exports = function(grunt) {
             }
         },
 
-        // Auto Prefixed CSS
-        autoprefixer:{
-            dist:{
-                files:{
-                    'css/main.scss':'css/main.scss'
-                }
-            }
-        },
-
         // Minified CSS
         sass: {
             dist: {
-
+                options: {
+                    style: 'compressed'
+                },
                 files: {
                     'css/main.min.css': 'css/main.scss'
                 }
             } 
+        },
+
+        // Auto Prefixed CSS
+        autoprefixer:{
+            dist:{
+                files:{
+                    'css/main.min.css':'main.min.css'
+                }
+            }
         },
 
         // Minified IMAGE

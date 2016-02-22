@@ -1,44 +1,57 @@
 .bgSection {
+	.shape_up {
+		display: none;
+		height:21px; 
+		left:0;
+		margin:auto;
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:2;
+
+		span {
+			height: 20px;
+		}
+	}
+
+	.shape_down {
+		@extend .shape_up;
+		bottom: -1px;
+		top: initial;
+		span {
+			height: 20px;
+		}
+	}
+
 	&.shape-tab_up{
 		padding-top:20px;
+		> .shape_up {
+			display: block;
+		}
 	}
 
 	&.shape-tab_down{
 		padding-bottom:20px;
+		> .shape_down {
+			display: block;
+		}
 	}
 
 	&.shape-tab_up_down{
-		padding:20px 0;
+		@extend .shape-tab_up;
+		@extend .shape-tab_down;
 	}
 
 	&.shape-tab_up:before,
-	.shape-tab_up_down:before{
+	&.shape-tab_up_down:before{
 		content:" ";
-		height:21px; 
-		left:0;
-		margin:auto;
-		position:absolute;
-		right:0;
-		top:-20px;
 		width:66%;
-		z-index:2;
 	}
 
-	&.shape-tab_down:after,
-	.shape-tab_up_down:after{
-		bottom:-20px;
-		content:" ";
-		height:21px; 
-		left:0;
-		margin:auto;
-		position:absolute;
-		right:0;
-		width:66%;
-		z-index:2;
+	&.shape-tab_up > div,
+	&.shape-tab_down > div,
+	&.shape-tab_up_down > div {
+		height: calc(100% + 40px);
+		margin-top: -20px;
 	}
-}
-
-#mainContainer > section:first-child > .shape-tab_up,
-#mainContainer > section:first-child > .shape-tab_up_down{
-	top: 20px;
 }

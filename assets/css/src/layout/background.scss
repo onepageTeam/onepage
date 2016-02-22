@@ -1,3 +1,6 @@
+$slider_btn_offset: 20px;
+
+
 .bgSection {
     height: 100%;
     left: 0;
@@ -14,52 +17,66 @@
         width: 100%;
     }
 } 
+
 .template_slider {
     clear: both;
     height: 100%;
     width: 100%;
+
+    > li {
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: inline-block;
+        float: left;
+        height: 100%;
+        text-align: center;
+        width: 100%;
+    }
 }
-.template_slider > li {
-    background-position: top center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: inline-block;
-    float: left;
-    height: 100%;
-    text-align: center;
-    width: 100%;
+
+.bx-wrapper {
+    .bx-viewport {
+        border: none;
+        box-shadow: none;
+        height: auto!important;
+        left: 0;
+    }
+
+    .bx-loading {
+        background: url(../img/bx_loader.gif) center center no-repeat #fff;
+    }
 }
-.bx-wrapper .bx-viewport {
-    border: none;
-    box-shadow: none;
-    height: auto!important;
-    left: 0;
+
+.bxslider-controls {
+    > a {
+        height: 120px;
+        overflow: hidden;
+        position: absolute;
+        text-decoration: none;
+        top: calc(50% - 60px);
+        width: 60px;
+        z-index: 9;
+
+        &:hover {
+            width: 80px;
+        }
+    }
+
+    svg {
+        filter: drop-shadow( 0 0 1px #000);
+        transition: all 0.15s ease-out;
+    }
 }
-.bx-wrapper .bx-loading {
-    background: url(../img/bx_loader.gif) center center no-repeat #fff;
-}
-.bxslider-controls > a {
-    height: 120px;
-    overflow: hidden;
-    position: absolute;
-    text-decoration: none;
-    top: calc(50% - 60px);
-    width: 90px;
-    z-index: 9;
-}
-.template_slider_btn_next svg {
-    transform: rotate(180deg);
-}
-.bxslider-controls svg {
-    filter: drop-shadow( 0 0 1px #000);
-    transition: all 0.15s ease-out;
-}
-.bxslider-controls > a:hover svg {
-    filter: drop-shadow( 0 0 5px #000);
-}
+
 .template_slider_btn_prev {
-    left: 40px;
+    left: $slider_btn_offset;
 }
+
 .template_slider_btn_next {
-    right: 40px;
+    right: $slider_btn_offset;
+
+     svg {
+        transform: rotate(180deg);
+    }
 }

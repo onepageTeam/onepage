@@ -7,7 +7,8 @@ if( !isset($template_slider_number) ){
 	/*$template_slider_number = 0;*/
 }
 
-$content = '<div class="bgSection '. $background_shape .' '. $background_type .' '. $background_color_ext .'">';
+$content = '<div class="bgSection '. $background_shape .' '. $background_type .'">';
+$content .= '<span class="shape_up row"><span class="col-xs-3"></span><span class="col-xs-6"></span><span class="col-xs-3"></span></span>';
 
 switch ($background_type) {
 	case 'color':
@@ -54,6 +55,7 @@ frameborder="0" allowfullscreen class="bgVideo">';*/
 		break;
 }
 
+$content .= '<span class="shape_down row"><span class="col-xs-3"></span><span class="col-xs-6"></span><span class="col-xs-3"></span></span>';
 $content .= '</div>'; // /.bgSection
 
 if($background_type == 'slider') {
