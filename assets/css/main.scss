@@ -683,7 +683,7 @@ $slider_btn_offset: 20px;
 		display: none;
 		height:21px; 
 		left:0;
-		margin:auto;
+		margin:-20px auto 0;
 		position:absolute;
 		right:0;
 		top:0;
@@ -736,10 +736,10 @@ $slider_btn_offset: 20px;
 	}
 }
 
-.homepage{
+.template-homepage{
 	color:#fff;
 	padding-bottom: 50px;
-	text-align:center;
+	text-align: center;
 
 	> .bgSection, 
 	> .contentSection {

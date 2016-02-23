@@ -120,7 +120,7 @@ if(get_field('theme_link_color', 'option')){
 /* Background */
 if( get_field('theme_background_color', 'option') )
 	echo 'body{background-color:'. get_field('theme_background_color', 'option') .';}' . "\n";
-	echo '.shape_up > :first-child, .shape_up > :last-child, .shape_down > :first-child, .shape_down > :last-child{background-color:'. get_field('theme_background_color', 'option') .';}' . "\n";
+	echo '.shape_up > :nth-child(2), .shape_down > :nth-child(2){background-color:'. get_field('theme_background_color', 'option') .';}' . "\n";
 
 ?>
 
@@ -221,7 +221,7 @@ if( $menu_items ) {
 		<?php
 		if($background_type == 'color')
 			echo '#'. $section .' .bgSection > div{background-color:'. get_field("background_color_int", $pageId) .';}' . "\n";
-			echo '#'. $section .' .shape_up > :first-child, #'. $section .' .shape_up > :last-child, #'. $section .' .shape_down > :first-child, #'. $section .' .shape_down > :last-child{background-color:'. get_field('background_color_ext', $pageId) .';}' . "\n";
+			echo '#'. $section .' .shape_up > :nth-child(2), #'. $section .' .shape_down > :nth-child(2){background-color:'. get_field('background_color_int', $pageId) .';}' . "\n";
 		echo "\n";
 		?>/* Background image */<?php
 		if($background_type == 'image')
