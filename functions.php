@@ -173,17 +173,6 @@ add_action( 'after_setup_theme', 'OnePage_setup' );
 
 
 
-// Remove Post meta boxes (https://codex.wordpress.org/Function_Reference/remove_meta_box)
-if (is_admin()) :
-	function my_remove_meta_boxes() {
-	remove_meta_box('pageparentdiv', 'page', 'side');
-	}
-	add_action( 'admin_menu', 'my_remove_meta_boxes' );
-endif;
-
-
-
-
 // Remove link from admin
 add_action( 'admin_menu', 'remove_menu_links' );
 function remove_menu_links() {
