@@ -13,8 +13,7 @@
 /**
  *  VARIABLES
  */
-
-/* Set Bootstrap class */
+// Set Bootstrap class
 $col_class = 'col-xs-12 col-sm-'. 12/count( get_field('flexible_content_columns', $pageId));
 // Set alignment
 if( get_field('flexible_content_inside_columns_content_alignment', $pageId) )
