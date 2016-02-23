@@ -4,11 +4,15 @@
 	text-align: center;
 
 	> .bgSection, 
-	> .contentSection {
+	> .content_margin {
 		min-height:70%; 
 	}
 
-	p{
+	h1 {
+		border-bottom: none;
+	}
+
+	p {
 		color:#fff;
 		font-size:18px;
 		margin:auto;

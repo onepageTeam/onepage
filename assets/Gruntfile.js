@@ -28,6 +28,10 @@ module.exports = function(grunt) {
             css: {
                 src: cssSrc,
                 dest: 'css/main.scss'
+            },
+            cssAdmin: { 
+                src: 'css/src/admin/*.scss', 
+                dest: 'css/admin.scss' 
             }
         },
 
@@ -46,7 +50,8 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'css/main.min.css': 'css/main.scss'
+                    'css/main.min.css': 'css/main.scss',
+                    'css/admin.min.css': 'css/admin.scss'
                 }
             } 
         },
@@ -55,7 +60,8 @@ module.exports = function(grunt) {
         autoprefixer:{
             dist:{
                 files:{
-                    'css/main.min.css':'main.min.css'
+                    'css/main.min.css':'css/main.min.css',
+                    'css/admin.min.css':'css/admin.min.css'
                 }
             }
         },
@@ -76,21 +82,13 @@ module.exports = function(grunt) {
             },
 
             css: {
-                files: cssSrc,
+                files: [cssSrc, 'css/src/admin/*.scss'],
                 tasks: ['concat', 'sass'],
                 options: {
                     spawn: false,
                 }
             }
         },
-
-
-        // Same thing for CSS of admin
-        concat: { css: { src: 'css/src/admin/*.scss', dest: 'css/admin.scss' } },
-        // Minified CSS
-        sass: { dist: { options: { style: 'compressed' }, files: { 'css/admin.min.css': 'css/admin.scss' } } },
-        // Auto Prefixed CSS
-        autoprefixer:{ dist:{ files:{ 'css/admin.min.css':'admin.min.css' } } },
 
     });
 

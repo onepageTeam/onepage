@@ -29,7 +29,7 @@ get_header();
 				?>
 					<section id="<?= sanitize_title($menu_item->title) ?>" class="<?= $templateName ?> row">
 						<?php include('inc/background_manager.php'); ?>
-						<div class="contentSection row">
+						<div class="row">
 							<?php
 							/* Display the template used OR display generic content */
 							if(!@include($templatePath)){

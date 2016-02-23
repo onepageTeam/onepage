@@ -24,11 +24,12 @@ if(get_field('theme_h6_size', 'option'))
 	echo 'h6{font-size:'. get_field('theme_h6_size', 'option') .'px;}' . "\n";
 
 if(get_field('theme_h1_color', 'option'))
-	echo 'h1{color:'. get_field('theme_h1_color', 'option') .';}' . "\n";
+	echo 'h1{border-bottom-color:'. get_field('theme_h1_color', 'option') .'; color:'. get_field('theme_h1_color', 'option') .';}' . "\n";
 if(get_field('theme_h2_color', 'option'))
 	echo 'h2{color:'. get_field('theme_h2_color', 'option') .';}' . "\n";
 if(get_field('theme_h3_color', 'option'))
-	echo 'h3{color:'. get_field('theme_h3_color', 'option') .';}' . "\n";
+	echo 'h3{color:'. get_field('theme_h3_color', 'option') .';} .flexible_content_mixed_video{box-shadow: 15px -12px 0px '. get_field('theme_h3_color', 'option') .';}' . "\n";
+
 if(get_field('theme_h4_color', 'option'))
 	echo 'h4{color:'. get_field('theme_h4_color', 'option') .';}' . "\n";
 if(get_field('theme_h5_color', 'option'))
@@ -163,7 +164,7 @@ if( $menu_items ) {
 					if(get_sub_field("page_setting_font_size", $pageId))
 						echo 'font-size:'. get_sub_field("page_setting_font_size", $pageId) .'px; ';
 					if(get_sub_field("page_setting_font_color", $pageId))
-						echo 'color:'. get_sub_field("page_setting_font_color", $pageId) .'; ';
+						echo 'border-color:'. get_sub_field("page_setting_font_color", $pageId) .'; color:'. get_sub_field("page_setting_font_color", $pageId) .'; ';
 				echo '}'. "\n";
 
 
@@ -221,7 +222,7 @@ if( $menu_items ) {
 		<?php
 		if($background_type == 'color')
 			echo '#'. $section .' .bgSection > div{background-color:'. get_field("background_color_int", $pageId) .';}' . "\n";
-			echo '#'. $section .' .shape_up > :nth-child(2), #'. $section .' .shape_down > :nth-child(2){background-color:'. get_field('background_color_int', $pageId) .';}' . "\n";
+			echo '#'. $section .' .shape_up > span, #'. $section .' .shape_down > span{background-color:'. get_field('background_color_int', $pageId) .';}' . "\n";
 		echo "\n";
 		?>/* Background image */<?php
 		if($background_type == 'image')

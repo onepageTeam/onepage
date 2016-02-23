@@ -146,14 +146,13 @@ add_action( 'wp_enqueue_scripts', 'dynamic_css_enqueue' ); //wp_enqueue_scripts 
  *********************************** CUSTOM ADMIN ***********************************
  ***************************************************************************/
 
-
 /**
  * Custom CSS for admin 
  */
-function my_custom_fonts() {
+function admin_styles() {
 	wp_enqueue_style('admin_styles' , get_template_directory_uri().'/assets/css/admin.min.css');
 }
-add_action('admin_head', 'my_custom_fonts');
+add_action('admin_head', 'admin_styles');
 
 
 

@@ -8,7 +8,7 @@ if( !isset($template_slider_number) ){
 }
 
 $content = '<div class="bgSection '. $background_shape .' '. $background_type .'">';
-$content .= '<span class="shape_up row"><span class="col-xs-3"></span><span class="col-xs-6"></span><span class="col-xs-3"></span></span>';
+$content .= '<span class="shape_up row"><span class="col-xs-6 col-xs-offset-3"></span></span>';
 
 switch ($background_type) {
 	case 'color':

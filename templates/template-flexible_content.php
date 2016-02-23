@@ -10,27 +10,26 @@
  */
 
 /* Set Bootstrap class */
-$col_xs = 'col-xs-12';
-if( count( get_field('flexible_content_columns', $pageId)) == 3 ):
-    $col_xs = 'col-xs-4';
-endif;
+$col_class = 'col-xs-12 col-sm-'. 12/count( get_field('flexible_content_columns', $pageId));
+
 
 
 $content ='';
 
-// check if the flexible content field has rows of data
-echo '<h1>'. $pageData->post_title .'</h1>';
+$content .= '<h1 class="col-xs-6 col-xs-offset-3">'. $pageData->post_title .'</h1>';
 
+$content .= '<div class="content_margin">';
+$content .= '<div class="col-xs-12">';
 if(get_field('flexible_content_columns_title', $pageId))
-    echo '<h2>'. get_field('flexible_content_columns_title', $pageId) .'</h2>';
+    $content .=     '<h2>'. get_field('flexible_content_columns_title', $pageId) .'</h2>';
 if(get_field('flexible_content_columns_subtitle', $pageId))
-    echo '<h3>'. get_field('flexible_content_columns_subtitle', $pageId) .'</h3>';
-
+    $content .=     '<h3>'. get_field('flexible_content_columns_subtitle', $pageId) .'</h3>';
+$content .= '</div>';
 
 
 if( have_rows('flexible_content_columns', $pageId) ):
     while ( have_rows('flexible_content_columns', $pageId) ) : the_row();
-        $content .= '<div class="'. $col_xs .'">';
+        $content .= '<div class="'. $col_class .'">';
         if( have_rows('flexible_content_mixed', $pageId) ):
             while ( have_rows('flexible_content_mixed', $pageId) ) : the_row();
                 $content .= '<div class="'. get_row_layout() .'">';

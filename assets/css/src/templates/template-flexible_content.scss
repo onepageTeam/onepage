@@ -27,12 +27,12 @@
 }
 
 .flexible_content_mixed_video{
+	box-shadow: 15px -12px 0px #000;
+	height: auto;
+	max-width: 100%;
+	overflow: hidden;
 	position: relative; 
 	padding-bottom: 56.25%;
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	height: auto;
 }
 
 .flexible_content_mixed_video > iframe,
