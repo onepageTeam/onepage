@@ -1,7 +1,6 @@
 <?php
 $background_shape = get_field('shape_type', $pageId);
 $background_type = get_field('background_type', $pageId);
-$background_color_ext = get_field('background_color_ext', $pageId);
 
 if( !isset($template_slider_number) ){
 	/*$template_slider_number = 0;*/
@@ -55,7 +54,7 @@ frameborder="0" allowfullscreen class="bgVideo">';*/
 		break;
 }
 
-$content .= '<span class="shape_down row"><span class="col-xs-3"></span><span class="col-xs-6"></span><span class="col-xs-3"></span></span>';
+$content .= '<span class="shape_down row"><span class="col-xs-6 col-xs-offset-3"></span></span>';
 $content .= '</div>'; // /.bgSection
 
 if($background_type == 'slider') {

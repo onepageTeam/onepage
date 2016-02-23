@@ -9,16 +9,25 @@
  * 
  */
 
+
+/**
+ *  VARIABLES
+ */
+
 /* Set Bootstrap class */
 $col_class = 'col-xs-12 col-sm-'. 12/count( get_field('flexible_content_columns', $pageId));
+// Set alignment
+if( get_field('flexible_content_inside_columns_content_alignment', $pageId) )
+    $extraClass_title_alignment = get_field('flexible_content_title_alignment', $pageId);
+if( get_field('flexible_content_inside_columns_content_alignment', $pageId) )
+    $extraClass_text_alignment = get_field('flexible_content_inside_columns_content_alignment', $pageId);
 
 
 
 $content ='';
-
 $content .= '<h1 class="col-xs-6 col-xs-offset-3">'. $pageData->post_title .'</h1>';
 
-$content .= '<div class="content_margin">';
+$content .= '<div class="content_margin text-'. $extraClass_title_alignment .'">';
 $content .= '<div class="col-xs-12">';
 if(get_field('flexible_content_columns_title', $pageId))
     $content .=     '<h2>'. get_field('flexible_content_columns_title', $pageId) .'</h2>';
@@ -29,7 +38,7 @@ $content .= '</div>';
 
 if( have_rows('flexible_content_columns', $pageId) ):
     while ( have_rows('flexible_content_columns', $pageId) ) : the_row();
-        $content .= '<div class="'. $col_class .'">';
+        $content .= '<div class="'. $col_class .' text-'. $extraClass_text_alignment .'">';
         if( have_rows('flexible_content_mixed', $pageId) ):
             while ( have_rows('flexible_content_mixed', $pageId) ) : the_row();
                 $content .= '<div class="'. get_row_layout() .'">';

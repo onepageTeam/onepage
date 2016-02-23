@@ -29,7 +29,6 @@ if(get_field('theme_h2_color', 'option'))
 	echo 'h2{color:'. get_field('theme_h2_color', 'option') .';}' . "\n";
 if(get_field('theme_h3_color', 'option'))
 	echo 'h3{color:'. get_field('theme_h3_color', 'option') .';} .flexible_content_mixed_video{box-shadow: 15px -12px 0px '. get_field('theme_h3_color', 'option') .';}' . "\n";
-
 if(get_field('theme_h4_color', 'option'))
 	echo 'h4{color:'. get_field('theme_h4_color', 'option') .';}' . "\n";
 if(get_field('theme_h5_color', 'option'))
