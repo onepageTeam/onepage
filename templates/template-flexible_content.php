@@ -1,13 +1,20 @@
 <?php
 /**
  *
- * Template Name: Flexible content columns
+ * Template Name: Flexible content
  *
  * @package OnePage
  * @subpackage OnePage
  * @since OnePage 0.1
  * 
  */
+
+/* Set Bootstrap class */
+$col_xs = 'col-xs-12';
+if( count( get_field('flexible_content_columns', $pageId)) == 3 ):
+    $col_xs = 'col-xs-4';
+endif;
+
 
 $content ='';
 
@@ -22,11 +29,8 @@ if(get_field('flexible_content_columns_subtitle', $pageId))
 
 
 if( have_rows('flexible_content_columns', $pageId) ):
-    $content .= '<div class="flexible_content_'. count( get_field('flexible_content_columns', $pageId) ) .'column">';
-
     while ( have_rows('flexible_content_columns', $pageId) ) : the_row();
-        $content .= '<div class="flexible_content_column">';
-
+        $content .= '<div class="'. $col_xs .'">';
         if( have_rows('flexible_content_mixed', $pageId) ):
             while ( have_rows('flexible_content_mixed', $pageId) ) : the_row();
                 $content .= '<div class="'. get_row_layout() .'">';
@@ -42,10 +46,8 @@ if( have_rows('flexible_content_columns', $pageId) ):
                 $content .= '</div>';
             endwhile;
         endif;
-
         $content .= '</div>';
     endwhile;
-
     $content .= '</div>';
 endif;
 

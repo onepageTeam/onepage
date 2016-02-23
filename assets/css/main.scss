@@ -221,122 +221,6 @@ $brand-primary: #27ae60;
 $screen-sm-min : 768px;
 $screen-md-min : 992px;
 $screen-lg-min : 1200px;
-/* Hide (function php) in the admin */
-#wp-admin-bar-new-content, 
-#wp-admin-bar-comments,
-#wpbody-content .manage-menus{display:none;}
-
-/* Display an error message when trying to add a child in the menu */
-#menu-to-edit .menu-item-depth-1 .menu-item-handle,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle
-#menu-to-edit .menu-item-depth-3 .menu-item-handle{background:red;}
-#menu-to-edit .menu-item-depth-1 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-3 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-1 .menu-item-handle:after,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle:after,
-#menu-to-edit .menu-item-depth-3 .menu-item-handle:after{content:"Error - No sub menu avalable for this theme"; font:600 25px "Courier New", Courier, monospace;}
-
-/* Advanced Custom Fields */
-.acf-postbox.seamless > .acf-fields > .acf-field{
-	box-sizing:border-box; 
-	padding-right:4%;
-}
-
-.imgCategory img{
-	max-height:10px;
-    width:auto;
-}
-
-#flexible_content_columns .acf-row{display:inline-block; margin-top:20px; vertical-align:top; width:33%;}
-#flexible_content_columns .acf-row > .acf-fields{width:82%;}
-
-/* Pages Background and Shape */
-#shape_type li{
-	margin-top:140px;
-	min-width:200px;
-}
-
-#shape_type input{
-	position:relative;
-}
-
-#shape_type input:after{
-	background-color:#2e2e2e;
-	background-size:contain;
-	top:-100px;
-	content:" "; 
-	height:90px; 
-	left:0; 
-	position:absolute; 
-	width:200px;
-}
-
-#shape_type input[value="shape-full"]:after{
-	background:url(admin/img/shape-full.png) no-repeat left center;
-}
-
-#shape_type input[value="shape-tab_up"]:after{
-	background:url(admin/img/shape-tab_up.png) no-repeat left center;
-}
-
-#shape_type input[value="shape-tab_down"]:after{
-	background:url(admin/img/shape-tab_down.png) no-repeat left center;
-}
-
-#shape_type input[value="shape-tab_up_down"]:after{
-	background:url(admin/img/shape-tab_up_down.png) no-repeat left center;
-}
-
-#shape_type input[value="shape-bandeau"]:after{
-	background:url(admin/img/shape-bandeau.png) no-repeat left center;
-}
-
-#background_type{
-	position:relative;
-}
-
-.acf-fields > .acf-field{
-	background-color:#fff;
-	position:relative;
-}
-
-#background_type:after{
-	background:url(admin/img/forbidden.png) no-repeat top left;
-	color:#23282d;
-	top:20px;
-	content:" Choices of 'Shape' & 'Background' incompatible"; 
-	height:133px; 
-	right:-370px; 
-	padding:10px 0 0 50px ;
-	position:absolute; 
-	width:300px;
-}
-
-
-/* acf-field-message */
-.acf-fields > .acf-field-message{
-	background-color:#f9f9f9;
-}
-
-
-/* Hide (function php) in the admin */
-#wp-admin-bar-new-content, 
-#wp-admin-bar-comments,
-#wpbody-content .manage-menus{display:none;}
-
-/* Display an error message when trying to add a child in the menu */
-#menu-to-edit .menu-item-depth-1 .menu-item-handle,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle
-#menu-to-edit .menu-item-depth-3 .menu-item-handle{background:red;}
-#menu-to-edit .menu-item-depth-1 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-3 .menu-item-handle:before,
-#menu-to-edit .menu-item-depth-1 .menu-item-handle:after,
-#menu-to-edit .menu-item-depth-2 .menu-item-handle:after,
-#menu-to-edit .menu-item-depth-3 .menu-item-handle:after{content:"Error - No sub menu avalable for this theme"; font:600 25px "Courier New", Courier, monospace;}
-
-
 /**
  * SOCIALS ICONS
  */
@@ -793,4 +677,76 @@ $slider_btn_offset: 20px;
 	.ctaLink{
 		font-size: 20px;
 	}
+}
+
+/**
+ * FLEXIBLE CONTENT COLUMNS
+ */
+.flexible_content_columns > .contentSection{
+	padding-left:4%;
+	padding-right:4%;
+}
+
+.flexible_content_column{
+	display:inline-block;
+	padding-bottom:1.5%;
+	padding-right:1.5%;
+	text-align:left;
+	vertical-align:top;
+	width:33%;
+}
+
+.flexible_content_mixed > .contentSection > div:last-child{
+	padding-right:0;
+}
+
+.flexible_content_mixed_image > img{
+	display:block;
+	margin:0 auto;
+	max-width:100%;
+}
+
+.flexible_content_mixed_video{
+	position: relative; 
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+
+.flexible_content_mixed_video > iframe,
+.flexible_content_mixed_video > object,
+.flexible_content_mixed_video > embed{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Differents sizes */
+.flexible_content_1column,
+.flexible_content_2column,
+.flexible_content_3column,
+.flexible_content_4column,
+.flexible_content_5column,
+.flexible_content_6column{
+	text-align:center;
+}
+
+.flexible_content_1column > div{
+	padding-right:0;
+	width:100%;
+}
+
+.flexible_content_2column > div,
+.flexible_content_4column > div{
+	width:50%;
+}
+
+.flexible_content_3column > div,
+.flexible_content_5column > div,
+.flexible_content_6column > div{
+	width:33%;
 }

@@ -230,7 +230,8 @@ if( $menu_items ) {
 		/**
 		 * Template Flexible content columns
 		 **/
-		/* Columns alignment */
+		/* Columns alignment 
+		TODO: REVOIR LES SELECTEUR */
 		if(get_field('flexible_content_columns_alignment', $pageId))
 			echo '#'. $section .' flexible_content_1column, 
 				  #'. $section .' .flexible_content_2column, 

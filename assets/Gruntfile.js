@@ -10,8 +10,8 @@ var cssSrc = [
                 'node_modules/bootstrap/dist/css/bootstrap.min.css', // include bootstrap
                 'plugins/**/*.css', // include plugins
                 'css/src/*.scss',
-                'css/src/**/*.scss' 
-            ];
+                'css/src/**/*.scss',
+                '!css/src/admin/*.scss'            ];
 
 module.exports = function(grunt) {
 
@@ -23,11 +23,11 @@ module.exports = function(grunt) {
         concat: {
             js: {
                 src: jsSrc,
-                dest: 'js/main.js',
+                dest: 'js/main.js'
             },
             css: {
                 src: cssSrc,
-                dest: 'css/main.scss',
+                dest: 'css/main.scss'
             }
         },
 
@@ -82,7 +82,16 @@ module.exports = function(grunt) {
                     spawn: false,
                 }
             }
-        }
+        },
+
+
+        // Same thing for CSS of admin
+        concat: { css: { src: 'css/src/admin/*.scss', dest: 'css/admin.scss' } },
+        // Minified CSS
+        sass: { dist: { options: { style: 'compressed' }, files: { 'css/admin.min.css': 'css/admin.scss' } } },
+        // Auto Prefixed CSS
+        autoprefixer:{ dist:{ files:{ 'css/admin.min.css':'admin.min.css' } } },
+
     });
 
     // 3. Where we tell Grunt we plan to use this plug-in.

@@ -150,10 +150,10 @@ add_action( 'wp_enqueue_scripts', 'dynamic_css_enqueue' ); //wp_enqueue_scripts 
 /**
  * Custom CSS for admin 
  */
-add_action('admin_head', 'my_custom_fonts');
 function my_custom_fonts() {
-	wp_enqueue_style('admin_styles' , get_template_directory_uri().'/css/admin_style.css');
+	wp_enqueue_style('admin_styles' , get_template_directory_uri().'/assets/css/admin.min.css');
 }
+add_action('admin_head', 'my_custom_fonts');
 
 
 
