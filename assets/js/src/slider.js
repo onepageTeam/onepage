@@ -40,7 +40,6 @@ $(document).ready(function() {
 
 		// Slider default value
 		slider_array[i] = $(this).bxSlider( sliderOptions );
-
 	});
 
 	// bind controls on custom controls, and run functions on every slider

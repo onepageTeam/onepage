@@ -454,7 +454,6 @@ a {
 		box-shadow: inherit;
 		border: none;
 		left: 0;
-		padding-bottom: 130px;
 	}
 }
 
@@ -775,13 +774,29 @@ $slider_btn_offset: 20px;
 }
 .template_slider {
 
-	.quote {
-		@extend h1;
-		border: none;
-		margin-bottom: 0;
-	}
 
 	.btn {
 		font-size: 30px;
+	    margin: 20px auto;
+	}
+
+	.quote {
+		@extend h1;
+		border: none;
+		display: inline-block;
+		margin-bottom: 0;
+		padding: 0 60px 30px;
+		position: relative;
+		width: auto;
+
+		.img_quote_open {
+			display:block;
+			fill: red;
+			height: 40px;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 60px;
+		}
 	}
 }
