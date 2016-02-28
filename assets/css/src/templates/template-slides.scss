@@ -1,0 +1,12 @@
+.template_slider {
+
+	.quote {
+		@extend h1;
+		border: none;
+		margin-bottom: 0;
+	}
+
+	.btn {
+		font-size: 30px;
+	}
+}

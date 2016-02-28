@@ -1,0 +1,33 @@
+.bx-wrapper {
+	clear: both;
+
+    .bx-loading {
+        background: url(../img/bx_loader.gif) center center no-repeat #fff;
+    }
+
+	.bx-viewport {
+		background: none;
+		box-shadow: inherit;
+		border: none;
+		left: 0;
+		padding-bottom: 130px;
+	}
+}
+
+.bxslider-controls > a {
+	&.template_slider_btn_next {
+		right: -32px;
+
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	&.template_slider_btn_prev {
+		left: -32px;
+	}
+
+	&:hover {
+		background-position: 0 0;
+	}
+}

@@ -23,18 +23,15 @@ switch ($background_type) {
 	case 'slider':
 		$containerStyle = '';
 		$background_slider_imgs = get_field('background_slider_imgs', $pageId);
-		$background_slider_duration = get_field('background_slider_duration', $pageId);
+		$sliderOptions_pause = get_field('background_slider_duration', $pageId);
 
 		$content .= '<div>';
-        $content .= '<ul class="template_slider" data-background_slider_duration="'. $background_slider_duration .'">';
+        $content .= 	'<ul class="template_slider" data-slider_options_pause="'. $sliderOptions_pause .'">';
 		foreach( $background_slider_imgs as $image ):
-            $content .= '<li style="background-image:url('. $image['sizes']['large'] .');">';
-            $content .= '</li>';
+           $content .= 		'<li style="background-image:url('. $image['sizes']['large'] .');"></li>';
         endforeach;
-        $content .= '</ul>';
+        $content .= 	'</ul>';
         $content .= '</div>';
-
-		// Check .bxslider-controls also bellow
 
 		break;
 	
@@ -58,7 +55,7 @@ $content .= '<span class="shape_down row"><span class="col-xs-6 col-xs-offset-3"
 $content .= '</div>'; // /.bgSection
 
 if($background_type == 'slider') {
-	$content .= '<div class="bxslider-controls">';
+	$content .= '<div class="bxslider-controls bg">';
 	$content .= 	'<a href="#" class="template_slider_btn_prev"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197.402 197.402" xml:space="preserve"><polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/></svg></a>';
 	$content .= 	'<a href="#" class="template_slider_btn_next"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 197.402 197.402" xml:space="preserve"><polygon points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/></svg></a>';
 	$content .= '</div>'; // /.bgSection
