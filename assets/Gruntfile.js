@@ -1,21 +1,14 @@
 var jsSrc = [
-<<<<<<< HEAD
                 'js/libs/jquery-2.2.0.min.js', // jQuery
                 'node_modules/bootstrap/dist/js/bootstrap.min.js', // include bootstrap
                 'plugins/**/*.js', // include plugins
-=======
-                'node_modules/bootstrap/dist/js/bootstrap.min.js', // include bootstrap
->>>>>>> parent of 3b43ba8... reinstall grunt
                 'js/src/*.js', // All JS in the src folder
                 'js/src/**/*.js' 
             ];
 
 var cssSrc = [
                 'node_modules/bootstrap/dist/css/bootstrap.min.css', // include bootstrap
-<<<<<<< HEAD
                 'plugins/**/*.css', // include plugins
-=======
->>>>>>> parent of 3b43ba8... reinstall grunt
                 'css/src/*.scss',
                 'css/src/**/*.scss',
                 '!css/src/admin/*.scss'            ];

@@ -5,16 +5,11 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
 
-<<<<<<< HEAD:assets/css/src/_callfirst/variables.scss
 $brand-primary: #27ae60;
 
 $screen-sm-min : 768px;
 $screen-md-min : 992px;
 $screen-lg-min : 1200px;
-=======
-$brand-primary:         #27ae60;
->>>>>>> parent of 3b43ba8... reinstall grunt:assets/css/src/common/variables.scss
-
 /* Hide (function php) in the admin */
 #wp-admin-bar-new-content, 
 #wp-admin-bar-comments,
@@ -202,6 +197,10 @@ a {
 }
 .clear{clear:both;}
 
+@import url(https://fonts.googleapis.com/css?family=Cinzel);
+@import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
+
+$brand-primary: #27ae60;
 
 
 #mainContainer {
