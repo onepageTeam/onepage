@@ -1,14 +1,22 @@
 var jsSrc = [
+<<<<<<< HEAD
                 'js/libs/jquery-2.2.0.min.js', // jQuery
                 'node_modules/bootstrap/dist/js/bootstrap.min.js', // include bootstrap
                 'plugins/**/*.js', // include plugins
+=======
+                '/js/libs/bootstrap-sass-3.3.6/assets/javascripts/bootstrap.min.js', // include bootstrap
+>>>>>>> master
                 'js/src/*.js', // All JS in the src folder
                 'js/src/**/*.js' 
             ];
 
 var cssSrc = [
+<<<<<<< HEAD
                 'node_modules/bootstrap/dist/css/bootstrap.min.css', // include bootstrap
                 'plugins/**/*.css', // include plugins
+=======
+                '/js/libs/bootstrap-sass-3.3.6/assets/stylesheets/_bootstrap.scss', // include bootstrap
+>>>>>>> master
                 'css/src/*.scss',
                 'css/src/**/*.scss',
                 '!css/src/admin/*.scss'            ];
