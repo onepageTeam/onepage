@@ -5,11 +5,22 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:assets/css/src/_callfirst/variables.scss
+>>>>>>> 42c2a3736f687e74ba3e3641cc79dbbb82bc5c8b
 $brand-primary: #27ae60;
 
 $screen-sm-min : 768px;
 $screen-md-min : 992px;
 $screen-lg-min : 1200px;
+<<<<<<< HEAD
+=======
+=======
+$brand-primary: #27ae60;
+>>>>>>> master:assets/css/src/common/variables.scss
+
+>>>>>>> 42c2a3736f687e74ba3e3641cc79dbbb82bc5c8b
 /* Hide (function php) in the admin */
 #wp-admin-bar-new-content, 
 #wp-admin-bar-comments,
@@ -197,10 +208,13 @@ a {
 }
 .clear{clear:both;}
 
+<<<<<<< HEAD
 @import url(https://fonts.googleapis.com/css?family=Cinzel);
 @import url(https://fonts.googleapis.com/css?family=Cantarell:400,400italic,700,700italic);
 
 $brand-primary: #27ae60;
+=======
+>>>>>>> 42c2a3736f687e74ba3e3641cc79dbbb82bc5c8b
 
 
 #mainContainer {
