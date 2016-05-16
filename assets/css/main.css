@@ -1,6 +1,6 @@
 @import url(../plugins/bootstrap-3.3.6-dist/css/bootstrap.min.css);
 @import url(../plugins/jquery.bxslider/jquery.bxslider.css);
-
+@import url(partials/menu.css);
 
 
 /**
@@ -10,6 +10,8 @@ html, body, div, span, object, iframe, h1, .template_slider .quote, h2, h3, h4, 
 	margin: 0;
 	padding: 0;
 }
+
+
 
 body {
 	line-height: 1;
@@ -21,7 +23,10 @@ body {
 @font-face {
 	font-family: 'si';
   src: url("assets/fonts/socicon.eot");
-  src: url("assets/fonts/socicon.eot?#iefix") format("embedded-opentype"), url("assets/fonts/socicon.woff") format("woff"), url("assets/fonts/socicon.ttf") format("truetype"), url("assets/fonts/socicon.svg#icomoonregular") format("svg");
+  src: url("assets/fonts/socicon.eot?#iefix") format("embedded-opentype"), 
+  url("assets/fonts/socicon.woff") format("woff"), 
+  url("assets/fonts/socicon.ttf") format("truetype"), 
+  url("assets/fonts/socicon.svg#icomoonregular") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -112,135 +117,15 @@ a:focus, a :hover {
 	padding-right: 0 !important;
 }
 
-/* MAIN MENU BURGER */
-#nav-toggle {
-	cursor: pointer;
-	padding: 10px 35px 16px 0px;
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	z-index: 9;
-}
 
-#nav-toggle span,
-  #nav-toggle span:before,
-  #nav-toggle span:after {
-	cursor: pointer;
-	border-radius: 1px;
-	height: 5px;
-	width: 35px;
-	background: white;
-	position: absolute;
-	display: block;
-	content: '';
-	transition: all 200ms ease-in-out;
-}
 
-#nav-toggle span:before {
-	top: -10px;
-}
 
-#nav-toggle span:after {
-	bottom: -10px;
-}
 
-#mainMenu.active #nav-toggle span {
-	background-color: transparent;
-}
 
-#mainMenu.active #nav-toggle span:before, #mainMenu.active #nav-toggle span:after {
-	top: 0;
-}
 
-#mainMenu.active #nav-toggle span:before {
-	transform: rotate(45deg);
-}
 
-#mainMenu.active #nav-toggle span:after {
-	transform: rotate(-45deg);
-}
 
-/* MAIN MENU SIDE CLOSE */
-#mainMenu {
-	background-color: rgba(0, 0, 0, 0.5);
-	left: 0;
-	max-width: 70px;
-	min-height: 70px;
-	padding: 20px;
-	position: fixed;
-	top: 0;
-	text-align: left;
-	-webkit-transition: all 200ms ease-in-out;
-	transition: all 200ms ease-in-out;
-	width: 100%;
-	z-index: 1;
-}
 
-#menu-main-menu {
-	margin: 20px 0;
-}
-
-#menu-main-menu li {
-	display: block;
-	list-style: none;
-	position: relative;
-	padding: 0 12px;
-}
-
-#menu-main-menu a {
-	color: #fff;
-	display: none;
-	font: 400 18px Cinzel;
-	padding: 7px 12px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-
-#menu-main-menu .active a {
-	background-color: #6d9759;
-	color: #fff;
-}
-
-/* MAIN MENU SIDE OPEN */
-#mainMenu.active {
-	height: 100%;
-	max-width: 300px;
-	padding: 20px;
-}
-
-#mainMenu.active #menu-main-menu li:before {
-	background-color: #fff;
-	content: " ";
-	display: inline-block;
-	height: 15px;
-	position: absolute;
-	left: 0;
-	top: 18px;
-	transform: translateY(-50%);
-	width: 15px;
-}
-
-#mainMenu.active #menu-main-menu li:hover:before {
-	display: none;
-}
-
-#mainMenu.active #menu-main-menu a {
-	display: block;
-}
-
-#menu-main-menu li:hover a {
-	background-color: #fff;
-	color: #6d9759;
-}
-
-.menu-main-menu-container {
-	overflow: auto;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 40px;
-}
 
 .bx-wrapper {
 	clear: both;
