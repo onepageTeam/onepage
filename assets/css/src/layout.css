@@ -1,0 +1,128 @@
+/**
+ * BACKGROUND
+ */
+.bgSection {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+.bgSection > div {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.bgSection .template_slider {
+	clear: both;
+	height: 100%;
+	width: 100%;
+}
+
+.bgSection .template_slider > li {
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: inline-block;
+	float: left;
+	height: 100%;
+	text-align: center;
+	width: 100%;
+}
+
+.bgSection .bx-wrapper .bx-viewport {
+	border: none;
+	box-shadow: none;
+	height: auto !important;
+	left: 0;
+}
+
+.bxslider-controls > a {
+	height: 120px;
+	overflow: hidden;
+	position: absolute;
+	text-decoration: none;
+	top: calc(50% - 60px);
+	width: 60px;
+	z-index: 9;
+}
+
+.bxslider-controls > a:hover {
+	margin-top: -5px;
+	width: 80px;
+}
+
+.bxslider-controls.bg .template_slider_btn_prev {
+	left: 20px;
+}
+
+.bxslider-controls.bg .template_slider_btn_next {
+	right: 20px;
+}
+
+
+
+
+
+
+/**
+ * SHAPES
+ */
+.bgSection .shape_up, .bgSection .shape_down {
+	display: none;
+	height: 21px;
+	left: 0;
+	margin: -20px auto 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.bgSection .shape_up span, .bgSection .shape_down span {
+	height: 20px;
+}
+
+.bgSection .shape_down {
+	bottom: -21px;
+	top: initial;
+}
+
+.bgSection .shape_down span {
+	height: 20px;
+}
+
+.bgSection.shape-tab_up, .bgSection.shape-tab_up_down {
+	padding-top: 20px;
+	z-index: 0;
+}
+
+.bgSection.shape-tab_up > .shape_up, .bgSection.shape-tab_up_down > .shape_up, .bgSection.shape-tab_up > .shape_down, .bgSection.shape-tab_up_down > .shape_down {
+	display: block;
+}
+
+.bgSection.shape-tab_down, .bgSection.shape-tab_up_down {
+	padding-bottom: 20px;
+	z-index: 0;
+}
+
+.bgSection.shape-tab_down > .shape_down, .bgSection.shape-tab_up_down > .shape_down {
+	display: block;
+}
+
+.bgSection.shape-tab_up:before, .bgSection.shape-tab_up_down:before, .bgSection.shape-tab_up_down:before {
+	content: " ";
+	width: 66%;
+}
+
+.bgSection.shape-tab_up > div, .bgSection.shape-tab_up_down > div,
+.bgSection.shape-tab_down > div, .bgSection.shape-tab_up_down > div,
+.bgSection.shape-tab_up_down > div {
+	height: calc(100% + 40px);
+	margin-top: -20px;
+}

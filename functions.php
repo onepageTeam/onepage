@@ -150,7 +150,7 @@ add_action( 'wp_enqueue_scripts', 'dynamic_css_enqueue' ); //wp_enqueue_scripts 
  * Custom CSS for admin 
  */
 function admin_styles() {
-	wp_enqueue_style('admin_styles' , get_template_directory_uri().'/assets/css/admin.min.css');
+	wp_enqueue_style('admin_styles' , get_template_directory_uri().'/assets/css/admin/admin.css');
 }
 add_action('admin_head', 'admin_styles');
 

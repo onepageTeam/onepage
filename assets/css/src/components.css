@@ -1,4 +1,35 @@
-/* MAIN MENU BURGER */
+/**
+ * GRID
+ */
+#mainContainer {
+	position: relative;
+	width: 100%;
+	z-index: 0;
+}
+
+#mainContainer > * {
+	padding: 50px 0;
+	position: relative;
+}
+
+.content_margin {
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 40px;
+}
+
+.row-no-padding [class*="col-"] {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+
+
+
+
+/**
+ * MAIN MENU BURGER
+ */
 #nav-toggle {
 	cursor: pointer;
 	padding: 10px 35px 16px 0px;
@@ -126,4 +157,85 @@
 	left: 0;
 	right: 0;
 	top: 40px;
+}
+
+
+
+
+
+/**
+ * SLIDER
+ */
+.bx-wrapper {
+	clear: both;
+}
+
+.bx-wrapper .bx-loading {
+	background: url(../img/bx_loader.gif) center center no-repeat #fff;
+}
+
+.bx-wrapper .bx-viewport {
+	background: none;
+	box-shadow: inherit;
+	border: none;
+	left: 0;
+}
+
+.bxslider-controls > a.template_slider_btn_next {
+	right: -32px;
+}
+
+.bxslider-controls > a.template_slider_btn_next svg {
+	transform: rotate(180deg);
+}
+
+.bxslider-controls > a.template_slider_btn_prev {
+	left: -32px;
+}
+
+.bxslider-controls > a:hover {
+	background-position: 0 0;
+}
+
+
+
+
+
+/**
+ * SOCIALS ICONS
+ */
+.socicon {
+	margin: 20px auto;
+	overflow: hidden;
+	padding: 0;
+	list-style: none;
+}
+
+.socicon li {
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+
+.socicon li a {
+	background-color: none;
+	color: #ffffff;
+	display: block;
+	margin: 0 11px 11px 0;
+	overflow: hidden;
+	padding: 9px;
+	position: relative;
+	text-decoration: none;
+	text-align: center;
+	z-index: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.socicon li a:before {
+	font-size: 2em;
+}
+
+.socicon li:last-child a {
+	margin-right: 0;
 }

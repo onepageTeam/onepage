@@ -1,0 +1,107 @@
+/**
+ * RESET CSS
+ */
+html, body, div, span, object, iframe, h1, .template_slider .quote, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figure, figcaption, footer, header, hgroup, menu, nav, output, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+/**
+ * SOCIALS ICONS
+ */
+@font-face {
+	font-family: 'si';
+  src: url("assets/fonts/socicon.eot");
+  src: url("assets/fonts/socicon.eot?#iefix") format("embedded-opentype"), 
+  url("assets/fonts/socicon.woff") format("woff"), 
+  url("assets/fonts/socicon.ttf") format("truetype"), 
+  url("assets/fonts/socicon.svg#icomoonregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+		font-family: si;
+		src: url(../fonts/socicon.svg) format(svg);
+	}
+}
+
+
+
+
+/**
+ * GLOBAL
+ */
+body {
+	background-color: #fff;
+	font-family: Cantarell;
+	line-height: 1em;
+}
+
+h1, .template_slider .quote, .h1 {
+	border-bottom: 3px solid #000;
+	color: #000;
+	font: 400 2em Cinzel;
+	margin: 0 auto 60px;
+	padding-bottom: 30px;
+	text-align: center;
+	width: 66%;
+}
+
+h2, .h2 {
+	color: #000;
+	font: 400 24px Cinzel;
+	margin: 0 auto 35px;
+}
+
+h3, .h3 {
+	color: #a99269;
+	font: 400 18px Cinzel;
+	margin: 0 auto 50px;
+}
+
+p {
+	color: #000;
+	font: 400 14px Cantarell;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+
+a:focus, a :hover {
+	text-decoration: none !important;
+}
+
+.btn {
+	border: none;
+	border-radius: 0;
+}
+
+@media (min-width: 768px) {
+	h1, .template_slider .quote {
+		font-size: 48px;
+	}
+}
+
+
+
+
+
+/**
+ * HELPERS
+ */
+.clear {
+	clear: both;
+}
+
+
+
+
+

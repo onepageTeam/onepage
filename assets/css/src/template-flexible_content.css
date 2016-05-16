@@ -1,0 +1,47 @@
+/**
+ * FLEXIBLE CONTENT COLUMNS
+ */
+.flexible_content_columns > .contentSection {
+	padding-left: 4%;
+	padding-right: 4%;
+}
+
+.flexible_content_column {
+	display: inline-block;
+	padding-bottom: 1.5%;
+	padding-right: 1.5%;
+	text-align: left;
+	vertical-align: top;
+	width: 33%;
+}
+
+.flexible_content_mixed > .contentSection > div:last-child {
+	padding-right: 0;
+}
+
+.flexible_content_mixed_image {
+	margin-bottom: 20px;
+}
+
+.flexible_content_mixed_image > img {
+	max-width: 100%;
+}
+
+.flexible_content_mixed_video {
+	box-shadow: 15px -12px 0px #000;
+	height: auto;
+	max-width: 100%;
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 56.25%;
+}
+
+.flexible_content_mixed_video > iframe,
+.flexible_content_mixed_video > object,
+.flexible_content_mixed_video > embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
